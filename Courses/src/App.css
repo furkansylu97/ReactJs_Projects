@@ -1,0 +1,9 @@
+:root {
+    --bulma-block-spacing: 10px;
+  }
+.image.is-4by3 img {
+    height: 150px;
+}
+.image.is-4by3 {
+    aspect-ratio: 4 / 2.4;
+}
