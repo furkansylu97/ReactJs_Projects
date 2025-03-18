@@ -1,13 +1,10 @@
 import React from 'react'
 
-export const Course = ({ title, description }) => {
-  /*
-  const title = props.title;
-  const description = props.description;
-  const { title, description } = props;
-  */
+export const Course = ({ image, title, description }) => {
+  
   return (
     <>
+      <img src={ image } alt="" />
       <div>{ title }</div>
       <div>{ description }</div>
     </>
