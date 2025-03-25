@@ -8,10 +8,10 @@ function getRandomCourse() {
 }
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [courses, setCourses] = useState([])
 
   const handleClick = () => {
-    
+    setCourses([...courses, getRandomCourse()])
   }
 
   return (
