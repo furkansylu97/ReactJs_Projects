@@ -17,7 +17,11 @@ function App() {
   return (
     <>
       <button onClick={handleClick}>Course Add</button>
-      <Course />
+      {
+        courses.map((course,index) => {
+          return <Course key={index} courseName={course} />  
+        })
+      }
     </>
   )
 }
