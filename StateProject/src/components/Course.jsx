@@ -5,10 +5,10 @@ import Bootstrap5 from '../assets/img/bootstrap5.png'
 import Frontend from '../assets/img/frontend.png'
 
 const courseMap = {
-  Angular : Angular ,
-  Bootstrap5 : Bootstrap5,
-  Frontend : Frontend,
-  Allweb : Allweb,
+  Angular,
+  Bootstrap5,
+  Frontend,
+  Allweb,
 }
 
 export const Course = ({ courseName }) => {
