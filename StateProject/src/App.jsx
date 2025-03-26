@@ -19,10 +19,12 @@ function App() {
   });
 
   return (
-    <>
-      <button onClick={handleClick}>Course Add</button>
-      <div>
-        { courseList }
+    <>  
+      <div className="App">
+        <button className='appButton' onClick={handleClick}>Course Add</button>
+        <div className='courseList'>
+          { courseList }
+        </div>
       </div>
     </>
   )

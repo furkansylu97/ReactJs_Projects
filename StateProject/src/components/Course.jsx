@@ -1,4 +1,5 @@
 import React from 'react'
+import './Course.css'
 import Allweb from '../assets/img/allweb.jpg'
 import Angular from '../assets/img/angular.jpg'
 import Bootstrap5 from '../assets/img/bootstrap5.png'
@@ -13,6 +14,8 @@ const courseMap = {
 
 export const Course = ({ courseName }) => {
   return (
-    <img src={courseMap[courseName]} alt="" />
+    <div className="coursePhotos">
+      <img className='photos' src={courseMap[courseName]} alt="" />
+    </div>
   )
 }
