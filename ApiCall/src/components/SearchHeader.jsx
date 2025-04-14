@@ -1,8 +1,9 @@
 import React from 'react'
 
-export const SearchHeader = () => {
+export const SearchHeader = ({ search }) => {
     
-    const handleFormSubmit = ({ search }) => {
+    const handleFormSubmit = (event) => {
+        event.preventDefault();
         search('car');
     }
 
