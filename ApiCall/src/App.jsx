@@ -5,10 +5,14 @@ import { SearchHeader } from './components/SearchHeader'
 function App() {
   const [count, setCount] = useState(0)
 
+  const handleSubmit = (term) => {
+    console.log(term);
+  }
+
   return (
     <>
       <div className="App">
-        <SearchHeader/>  
+        <SearchHeader search={ handleSubmit }/>  
       </div>
     </>
   )
