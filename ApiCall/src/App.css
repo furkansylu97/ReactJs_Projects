@@ -12,3 +12,14 @@
     display: flex;
     flex-direction: column;
 }
+
+.imagewraper {
+    columns: 250px 5;
+    column-gap: 10px;
+}
+
+.imageitemwrapper {
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 10px;
+}

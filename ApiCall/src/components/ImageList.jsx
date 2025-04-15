@@ -3,7 +3,7 @@ import { ImageItem } from './ImageItem'
 
 export const ImageList = ({ imagesPlaceholder }) => {
   return (
-    <div>
+    <div className='imagewraper'>
         { imagesPlaceholder.map((image, index) => {
            return <ImageItem key={ index } imageItemprps = { image }/>
         }) }
