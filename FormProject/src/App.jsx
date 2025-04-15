@@ -8,7 +8,7 @@ function App() {
 
   return (
     <>
-      <div>
+      <div className='appwrapper'>
         <TaskCreate />
         <h1>Tasks</h1>
         <Tasklist />

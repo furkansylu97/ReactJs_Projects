@@ -2,14 +2,14 @@ import React from 'react'
 
 export const TaskCreate = () => {
   return (
-    <div>
+    <div className='taskwrapper'>
         <h3>Please Add Task!</h3>
-        <form>
-            <label>Title</label>
-            <input />
-            <label>Enter Your Task</label>
-            <textarea />
-            <button>Create</button>
+        <form className='formwrapper'>
+            <label className='tasklabel'>Title</label>
+            <input className='taskinput' />
+            <label className='tasklabel'>Enter Your Task</label>
+            <textarea className='taskinput' rows={5} />
+            <button className='taskbtn'>Create</button>
         </form>
     </div>
   )
