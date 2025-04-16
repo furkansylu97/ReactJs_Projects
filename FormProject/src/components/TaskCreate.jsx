@@ -15,6 +15,8 @@ export const TaskCreate = ({ onCreate }) => {
   const handleSubmit = (event) => {
     event.preventDefault();
     onCreate(title, taskDesc);
+    setTitle('');
+    setTaskDesc('');
   }
 
   return (
