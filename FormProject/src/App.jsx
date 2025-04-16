@@ -6,10 +6,14 @@ import { Tasklist } from './components/Tasklist'
 function App() {
   const [count, setCount] = useState(0)
 
+  const createTask = (title, taskDesc) => {
+    console.log(title, taskDesc);
+  }
+
   return (
     <>
       <div className='appwrapper'>
-        <TaskCreate />
+        <TaskCreate onCreate={ createTask } />
         <h1>Tasks</h1>
         <Tasklist />
       </div>
