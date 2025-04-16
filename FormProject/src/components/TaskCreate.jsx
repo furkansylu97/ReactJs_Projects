@@ -12,6 +12,9 @@ export const TaskCreate = () => {
   const handleTaskChange = (event) => {
     setTaskDesc( event.target.value );
   }
+  const handleSubmit = (event) => {
+    event.preventDefault();
+  }
 
   return (
     <div className='taskwrapper'>
@@ -21,7 +24,7 @@ export const TaskCreate = () => {
             <input value={ title } onChange={ handleTitleChange } className='taskinput' />
             <label className='tasklabel'>Enter Your Task</label>
             <textarea value={ taskDesc } onChange={ handleTaskChange } className='taskinput' rows={5} />
-            <button className='taskbtn'>Create</button>
+            <button onClick={ handleSubmit } className='taskbtn'>Create</button>
         </form>
     </div>
   )
