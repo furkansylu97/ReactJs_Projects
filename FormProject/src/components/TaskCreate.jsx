@@ -4,9 +4,13 @@ import { useState } from 'react'
 export const TaskCreate = () => {
 
   const [title, setTitle] = useState('')
+  const [taskDesc, setTaskDesc] = useState('')
 
   const handleTitleChange = (event) => {
     setTitle( event.target.value );
+  }
+  const handleTaskChange = (event) => {
+    setTaskDesc( event.target.value );
   }
 
   return (
@@ -16,7 +20,7 @@ export const TaskCreate = () => {
             <label className='tasklabel'>Title</label>
             <input value={ title } onChange={ handleTitleChange } className='taskinput' />
             <label className='tasklabel'>Enter Your Task</label>
-            <textarea className='taskinput' rows={5} />
+            <textarea value={ taskDesc } onChange={ handleTaskChange } className='taskinput' rows={5} />
             <button className='taskbtn'>Create</button>
         </form>
     </div>
