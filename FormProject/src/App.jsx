@@ -22,7 +22,7 @@ function App() {
       <div className='appwrapper'>
         <TaskCreate onCreate={ createTask } />
         <h1>Tasks</h1>
-        <Tasklist />
+        <Tasklist tasks={ tasks } />
       </div>
     </>
   )
