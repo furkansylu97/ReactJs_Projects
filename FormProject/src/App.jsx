@@ -4,10 +4,17 @@ import { TaskCreate } from './components/TaskCreate'
 import { Tasklist } from './components/Tasklist'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [tasks, setTasks] = useState([])
 
   const createTask = (title, taskDesc) => {
-    console.log(title, taskDesc);
+    const createdTasks = [
+      ...tasks, {
+        id:Math.round(Math.random()*999999),
+        title,
+        taskDesc
+      }
+    ];
+    setTasks(createTask);
   }
 
   return (
