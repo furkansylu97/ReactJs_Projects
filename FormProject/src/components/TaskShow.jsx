@@ -16,7 +16,7 @@ export const TaskShow = ({ task, onDelete }) => {
   return (
     <div className='taskshowwrapper'>
       {showUpdate ? 
-      (<TaskCreate taskFormUpdate={true} />) 
+      (<TaskCreate task={task} taskFormUpdate={true} />) 
       :       
       (
         <div>
