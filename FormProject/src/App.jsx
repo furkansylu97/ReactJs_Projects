@@ -17,12 +17,19 @@ function App() {
     setTasks(createdTasks);
   }
 
+  const deleteTaskById = (id)  => {
+    const afterDeletingTasks = tasks.filter((tasks) => {
+      return tasks.id !== id;
+    })
+    setTasks(afterDeletingTasks);
+  }
+
   return (
     <>
       <div className='appwrapper'>
         <TaskCreate onCreate={ createTask } />
         <h1>Tasks</h1>
-        <Tasklist tasks={ tasks } />
+        <Tasklist tasks={ tasks } onDelete={deleteTaskById}/>
       </div>
     </>
   )

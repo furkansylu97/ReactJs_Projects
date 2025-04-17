@@ -1,8 +1,11 @@
 import React from 'react'
 
-export const TaskShow = ({ task }) => {
-    console.log(task);
+export const TaskShow = ({ task, onDelete }) => {
     
+  const handleDeleteClick = () => {
+    onDelete(task.id)
+  }
+
   return (
     <div className='taskshowwrapper'>
       <h3 className='taskshow-title'>Action To Be Taken</h3>
@@ -10,7 +13,7 @@ export const TaskShow = ({ task }) => {
       <h3 className='taskshow-title'>Action To Be Taken Description</h3>
       <p>{ task.taskDesc }</p>
       <div>
-        <button className='taskshowdel-btn'>Delete</button>
+        <button className='taskshowdel-btn' onClick={ handleDeleteClick }>Delete</button>
         <button className='taskshowupd-btn'>Update</button>
       </div>
     </div>
