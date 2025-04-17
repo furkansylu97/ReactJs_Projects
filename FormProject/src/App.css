@@ -8,6 +8,10 @@
    width: 450px;
 }
 
+.taskupdatewrapper {
+    width: 100%;
+}
+
 .formwrapper {
    display: flex;
    flex-direction: column; 
@@ -32,6 +36,10 @@
     background-color: green;
     color: white;
     font-size: 20px;
+}
+
+.update-btn {
+    background-color: blueviolet;
 }
 
 .tasklistwrapper {
