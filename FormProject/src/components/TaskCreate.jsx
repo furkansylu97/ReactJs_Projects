@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
 
-export const TaskCreate = ({ onCreate, task, taskFormUpdate }) => {
+export const TaskCreate = ({ onCreate, task, taskFormUpdate, onUpdate }) => {
 
   const [title, setTitle] = useState(task ? (task.title) : (''))
   const [taskDesc, setTaskDesc] = useState(task ? (task.taskDesc) : (''))
@@ -14,7 +14,12 @@ export const TaskCreate = ({ onCreate, task, taskFormUpdate }) => {
   }
   const handleSubmit = (event) => {
     event.preventDefault();
-    onCreate(title, taskDesc);
+    if (taskFormUpdate) {
+      onUpdate(task.id, title, taskDesc)
+    }
+    else {
+      onCreate(title, taskDesc);
+    }
     setTitle('');
     setTaskDesc('');
   }

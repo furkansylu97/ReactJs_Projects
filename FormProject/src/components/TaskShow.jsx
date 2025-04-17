@@ -2,7 +2,7 @@ import React from 'react'
 import { useState } from 'react'
 import { TaskCreate } from './TaskCreate'
 
-export const TaskShow = ({ task, onDelete }) => {
+export const TaskShow = ({ task, onDelete, onUpdate }) => {
   const [showUpdate, setShowUpdate] = useState(false)
     
   const handleDeleteClick = () => {
@@ -13,10 +13,15 @@ export const TaskShow = ({ task, onDelete }) => {
     setShowUpdate(!showUpdate);
   }
 
+  const handleSubmit = (id, updatedTitle, updatedTaskDesc) => {
+    setShowUpdate(false);
+    onUpdate(id, updatedTitle, updatedTaskDesc);
+  }
+
   return (
     <div className='taskshowwrapper'>
       {showUpdate ? 
-      (<TaskCreate task={task} taskFormUpdate={true} />) 
+      (<TaskCreate task={task} taskFormUpdate={true} onUpdate={handleSubmit}/>) 
       :       
       (
         <div>
