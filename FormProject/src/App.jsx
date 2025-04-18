@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import './App.css'
 import { TaskCreate } from './components/TaskCreate'
 import { Tasklist } from './components/Tasklist'
@@ -20,6 +20,16 @@ function App() {
     ];
     setTasks(createdTasks);
   }
+
+  const fetchTasks = async () => {
+    const response = await axios.get('http://localhost:3000/tasks');
+    console.log(response.data);
+    setTasks(response.data);
+  }
+
+  useEffect(() => {
+    fetchTasks();
+  },[])
 
   const deleteTaskById = (id)  => {
     const afterDeletingTasks = tasks.filter((tasks) => {
