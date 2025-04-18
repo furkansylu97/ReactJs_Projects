@@ -1,9 +1,30 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import './App.css'
 
 function App() {
   const [furkan, setFurkan] = useState(0);
   const [hattap, setHattap] = useState(0);
+
+  useEffect(() => {
+    console.log('It always works.');
+  })
+
+  useEffect(() => {
+    console.log('It works when rendered for the first time, but does not work afterward.');
+  },[])
+
+  useEffect(() => {
+    console.log('It works when it is rendered for the first time and there is a change in the Furkan value.');
+  },[furkan])
+
+  useEffect(() => {
+    console.log('It works when it is rendered for the first time and there is a change in the Hattap value.');
+  },[hattap])
+
+  useEffect(() => {
+    console.log('It works when it is rendered for the first time and there is a change in the Furkan or Hattap value.');
+  },[furkan, hattap])
+
   return (
     <>
     <div className='App'>
