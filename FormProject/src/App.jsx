@@ -23,7 +23,6 @@ function App() {
 
   const fetchTasks = async () => {
     const response = await axios.get('http://localhost:3000/tasks');
-    console.log(response.data);
     setTasks(response.data);
   }
 
@@ -31,7 +30,8 @@ function App() {
     fetchTasks();
   },[])
 
-  const deleteTaskById = (id)  => {
+  const deleteTaskById = async (id)  => {
+    await axios.delete(`http://localhost:3000/tasks/${id}`);
     const afterDeletingTasks = tasks.filter((tasks) => {
       return tasks.id !== id;
     })
