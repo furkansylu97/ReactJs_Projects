@@ -38,7 +38,10 @@ function App() {
     setTasks(afterDeletingTasks);
   }
 
-  const editTaskById = (id, updatedTitle, updatedTaskDesc)  => {
+  const editTaskById = async (id, updatedTitle, updatedTaskDesc)  => {
+    await axios.put(`http://localhost:3000/tasks/${id}`, {
+      title:updatedTitle, taskDesc:updatedTaskDesc
+    });
     const updatedTasks = tasks.map((tasks) => {
       if (tasks.id === id) {
         return {id,title:updatedTitle, taskDesc:updatedTaskDesc }   
