@@ -5,15 +5,15 @@ import { Auth } from './components/Auth'
 
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [authStatus, setAuthStatus] = useState(false)
 
   const loginAuth = () => {
-
+    setAuthStatus(true);
   }
 
   return (
     <>
-      <AuthContext.Provider value={{status: false, login: loginAuth}}>
+      <AuthContext.Provider value={{status: authStatus, login: loginAuth}}>
         <Auth/>
       </AuthContext.Provider>
 

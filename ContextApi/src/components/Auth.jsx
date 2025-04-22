@@ -3,7 +3,7 @@ import { useContext } from 'react'
 import AuthContext from '../context/authContext'
 
 export const Auth = () => {
-    const{ status } = useContext( AuthContext );
+    const{ status, login } = useContext( AuthContext );
 
   return (
     <div>
@@ -11,6 +11,7 @@ export const Auth = () => {
         {
             status ? <p>Yes, I have already logged in </p> : <p>No, I didn't log in !!</p>
         }
+        <button onClick={ login }>Sign in</button>
     </div>
   )
 }
