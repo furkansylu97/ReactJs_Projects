@@ -3,8 +3,8 @@ import { useState, useContext } from 'react'
 import { TaskCreate } from './TaskCreate'
 import TaskContext from '../context/Task'
 
-export const TaskShow = ({ deleteTaskById, editTaskById }) => {
-  const { task } = useContext( TaskContext )
+export const TaskShow = ({ task }) => {
+  const { deleteTaskById, editTaskById } = useContext( TaskContext )
   
   const [showUpdate, setShowUpdate] = useState(false)
     
@@ -24,7 +24,7 @@ export const TaskShow = ({ deleteTaskById, editTaskById }) => {
   return (
     <div className='taskshowwrapper'>
       {showUpdate ? 
-      (<TaskCreate task={task} taskFormUpdate={true}/>) 
+      (<TaskCreate task={task} taskFormUpdate={true} onUpdate={handleSubmit}/>) 
       :       
       (
         <div>
