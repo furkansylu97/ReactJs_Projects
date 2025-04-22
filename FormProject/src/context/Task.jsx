@@ -47,8 +47,16 @@ function Provider ({ children }) {
     setTasks(updatedTasks);
   }
 
+  const sharedValuesAndMethods = {
+    tasks,
+    createTask,
+    fetchTasks,
+    deleteTaskById,
+    editTaskById
+  }
+
     return (
-        <TaskContext.Provider>
+        <TaskContext.Provider value={ sharedValuesAndMethods }>
             { children }
         </TaskContext.Provider>
     )
