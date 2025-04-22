@@ -1,10 +1,13 @@
-import { useEffect } from 'react'
+import { useEffect, useContext } from 'react'
 import './App.css'
 import { TaskCreate } from './components/TaskCreate'
 import { Tasklist } from './components/Tasklist'
+import TaskContext from './context/Task'
 
 
 function App() {
+
+  const {fetchTasks} = useContext( TaskContext )
 
   useEffect(() => {
     fetchTasks();
@@ -13,9 +16,9 @@ function App() {
   return (
     <>
       <div className='appwrapper'>
-        <TaskCreate onCreate={ createTask } />
+        <TaskCreate />
         <h1>Tasks</h1>
-        <Tasklist tasks={ tasks } onDelete={deleteTaskById} onUpdate={editTaskById}/>
+        <Tasklist />
       </div>
     </>
   )
