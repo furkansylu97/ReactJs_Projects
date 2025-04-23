@@ -1,20 +1,21 @@
 import React from 'react'
-import { CourseList } from './CourseList'
+import { useState } from 'react'
+
 
 export const Courses = ( {courses, removeCourse} ) => {
+    const [index, setIndex] = useState(0);
+    const {content, title, price} = courses[index]
   return (
     <div className='courseWrapper'>
         <div>
             <h2>Kurslarım</h2>    
         </div>
-        <div className='allCardWrapper'>
-            {
-                courses.map((course) => {
-                    return (
-                        <CourseList key={course.id} {...course} removeOneCourse={ removeCourse } />
-                    )
-                })
-            }
+        <div className='cardWrapper'>
+            <div className='cardTitleWrapper'>
+                <h2 className='cardTitle'>{ title }</h2>
+                <h4 className='cardPrice'>{ price }₺</h4>
+            </div>
+            <p className='cardContent'>{ content }</p>
         </div>
     </div>
   )
