@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import './App.css'
 import axios from 'axios'
+import { Courses } from './components/Courses'
 
 function App() {
   const [courses, setCourses] = useState([])
@@ -18,7 +19,7 @@ function App() {
 
   return (
     <>
-    Courses Project
+      <Courses courses={ courses } />
     </>
   )
 }
