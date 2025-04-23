@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const CourseList = () => {
+export const CourseList = ({id, content, title, price}) => {
   return (
     <div>CourseList</div>
   )
