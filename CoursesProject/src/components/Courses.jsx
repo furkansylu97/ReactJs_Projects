@@ -11,12 +11,22 @@ export const Courses = ( {courses, removeCourse} ) => {
         if (index < 0) {
             return courses.length - 1;
         }
+        if (index > courses.length - 1 ) {
+            return 0;
+        }
         return index;
     }
 
     const prevCourse = () => {
         setIndex((index) =>{
             let newIndex = index - 1;
+            return checkIndex(newIndex);
+        })
+    }
+
+    const nextCourse = () => {
+        setIndex((index) =>{
+            let newIndex = index + 1;
             return checkIndex(newIndex);
         })
     }
@@ -34,7 +44,7 @@ export const Courses = ( {courses, removeCourse} ) => {
                 </div>
                 <p className='cardContent'>{ content }</p>
             </div>
-            <button className='prevNextBtn'><FaChevronRight/></button>
+            <button className='prevNextBtn' onClick={nextCourse}><FaChevronRight/></button>
         </div>
     </div>
   )
