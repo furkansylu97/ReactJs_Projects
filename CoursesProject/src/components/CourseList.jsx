@@ -2,6 +2,12 @@ import React from 'react'
 
 export const CourseList = ({id, content, title, price}) => {
   return (
-    <div>CourseList</div>
+    <div>
+        <div className='cardTitleWrapper'>
+            <h2 className='cardTitle'>{ title }</h2>
+            <h4 className='cardPrice'>{ price }₺</h4>
+        </div>
+        <button className='cardDeleteBtn'>Sil</button>
+    </div>
   )
 }
