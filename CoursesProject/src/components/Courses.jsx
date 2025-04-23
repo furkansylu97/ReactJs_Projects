@@ -17,6 +17,14 @@ export const Courses = ( {courses, removeCourse} ) => {
         return index;
     }
 
+    const getRandomCourse = () => {
+        let randomNumber = Math.floor(Math.random()*courses.length);
+        if (randomNumber === index ) {
+            randomNumber = index + 1;
+        }
+        setIndex(checkIndex(randomNumber));
+    }
+
     const prevCourse = () => {
         setIndex((index) =>{
             let newIndex = index - 1;
@@ -34,7 +42,7 @@ export const Courses = ( {courses, removeCourse} ) => {
     <div className='courseWrapper'>
         <div className='courseTitleWrapper'>
             <h2>Kurslarım</h2>    
-            <button className='randomBtn'>Rastgele Kurs Ata</button>
+            <button className='randomBtn' onClick={getRandomCourse}>Rastgele Kurs Ata</button>
         </div>
         <div className="newCardWrapper">
             <button className='prevNextBtn' onClick={prevCourse}><FaChevronLeft/></button>
