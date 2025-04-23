@@ -3,11 +3,11 @@ import { CourseList } from './CourseList'
 
 export const Courses = ( {courses, removeCourse} ) => {
   return (
-    <div>
+    <div className='courseWrapper'>
         <div>
             <h2>My Courses</h2>    
         </div>
-        <div>
+        <div className='allCardWrapper'>
             {
                 courses.map((course) => {
                     return (
