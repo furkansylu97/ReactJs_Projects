@@ -5,7 +5,7 @@ export const Courses = ( {courses, removeCourse} ) => {
   return (
     <div className='courseWrapper'>
         <div>
-            <h2>My Courses</h2>    
+            <h2>Kurslarım</h2>    
         </div>
         <div className='allCardWrapper'>
             {

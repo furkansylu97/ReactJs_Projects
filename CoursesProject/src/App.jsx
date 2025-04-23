@@ -38,7 +38,16 @@ function App() {
       {loading ? (
         <Loading />
       ) : (
-          <Courses courses={ courses } removeCourse = {deleteCourse} />
+        <>
+        {
+          courses.length === 0 ? (
+            <div>
+              <h2>Bütün Kurslar Silindi!!</h2>
+              <button onClick={() => {fetchCourses()}}>Yenile</button>
+            </div>
+          ) : (<Courses courses={ courses } removeCourse = {deleteCourse} />)
+        }
+        </>  
       )}
     </div>
     </>
