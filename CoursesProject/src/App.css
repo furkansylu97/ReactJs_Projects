@@ -28,4 +28,15 @@
     border: none;
     background-color: rebeccapurple;
     color: white;
-} 
+}
+.refreshWrapper {
+    text-align: center;
+}
+.refreshBtn {
+    width: 100px;
+    padding: 10px;
+    border-radius: 25px;
+    border: none;
+    background-color: blue;
+    color: white;
+}

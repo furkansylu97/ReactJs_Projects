@@ -41,9 +41,9 @@ function App() {
         <>
         {
           courses.length === 0 ? (
-            <div>
+            <div className='refreshWrapper'>
               <h2>Bütün Kurslar Silindi!!</h2>
-              <button onClick={() => {fetchCourses()}}>Yenile</button>
+              <button className='refreshBtn' onClick={() => {fetchCourses()}}>Yenile</button>
             </div>
           ) : (<Courses courses={ courses } removeCourse = {deleteCourse} />)
         }
