@@ -32,8 +32,9 @@ export const Courses = ( {courses, removeCourse} ) => {
     }
   return (
     <div className='courseWrapper'>
-        <div>
+        <div className='courseTitleWrapper'>
             <h2>Kurslarım</h2>    
+            <button className='randomBtn'>Rastgele Kurs Ata</button>
         </div>
         <div className="newCardWrapper">
             <button className='prevNextBtn' onClick={prevCourse}><FaChevronLeft/></button>
