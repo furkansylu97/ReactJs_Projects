@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState } from 'react'
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa6";
 
 
 export const Courses = ( {courses, removeCourse} ) => {
@@ -10,12 +11,16 @@ export const Courses = ( {courses, removeCourse} ) => {
         <div>
             <h2>Kurslarım</h2>    
         </div>
-        <div className='cardWrapper'>
-            <div className='cardTitleWrapper'>
-                <h2 className='cardTitle'>{ title }</h2>
-                <h4 className='cardPrice'>{ price }₺</h4>
+        <div className="newCardWrapper">
+            <button className='prevNextBtn'><FaChevronLeft/></button>
+            <div className='cardWrapper'>
+                <div className='cardTitleWrapper'>
+                    <h2 className='cardTitle'>{ title }</h2>
+                    <h4 className='cardPrice'>{ price }₺</h4>
+                </div>
+                <p className='cardContent'>{ content }</p>
             </div>
-            <p className='cardContent'>{ content }</p>
+            <button className='prevNextBtn'><FaChevronRight/></button>
         </div>
     </div>
   )

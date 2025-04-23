@@ -10,6 +10,16 @@
     justify-content: center;
     gap: 20px;
 }
+.newCardWrapper {
+    display: flex;
+    gap: 20px;
+}
+.prevNextBtn {
+    border: none;
+    background-color: white;
+    font-size: 20px;
+    color: red;
+}
 .cardWrapper {
     width: 400px;
     border: 1px solid gray;
