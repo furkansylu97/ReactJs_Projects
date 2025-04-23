@@ -1,7 +1,7 @@
 import React from 'react'
 import { CourseList } from './CourseList'
 
-export const Courses = ( {courses} ) => {
+export const Courses = ( {courses, removeCourse} ) => {
   return (
     <div>
         <div>
@@ -11,7 +11,7 @@ export const Courses = ( {courses} ) => {
             {
                 courses.map((course) => {
                     return (
-                        <CourseList key={course.id} {...course} />
+                        <CourseList key={course.id} {...course} removeOneCourse={ removeCourse } />
                     )
                 })
             }
