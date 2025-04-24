@@ -1,12 +1,16 @@
-import { useState } from 'react'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+  
 
   return (
     <>
-      useReducer Project
+      <div className="App">
+          <div>Number = {counter} </div>
+          <button onClick={() => dispatch('increment')}>Increase</button>
+          <button onClick={() => dispatch('reset')}>Reset</button>
+          <button onClick={() => dispatch('decrement')}>Decrease</button>
+      </div>
     </>
   )
 }
