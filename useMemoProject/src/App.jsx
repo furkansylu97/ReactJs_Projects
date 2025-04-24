@@ -2,13 +2,32 @@ import { useState } from 'react'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [number, setNumber] = useState(0);
+  const [dark, setDark] = useState(false);
+  const doubleNumber = slowFunc(number);
+
+  const theme = {
+    backgroundColor: dark ? '#333' : '#FFF',
+    color: dark ? '#FFF' : '#333',
+  };
 
   return (
     <>
-      useMemoProject
+      <div className="div App">
+      <input type="number" value={number} onChange={(e) => setNumber(parseInt(e.target.value))} />
+        <button onClick={() => setDark((prevDark) => !prevDark)}>
+          Temayı Değiştir
+        </button>
+        <div style={theme}>{doubleNumber}</div>
+      </div>
     </>
   )
+}
+
+function slowFunc(num) {
+  console.log('Fonksiyon çağrıldı');
+  for (let i = 0; i <= 1000000000; i++) {}
+  return num * 2;
 }
 
 export default App
