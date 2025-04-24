@@ -1,10 +1,12 @@
-import { useState } from 'react'
+import { useState, useMemo } from 'react'
 import './App.css'
 
 function App() {
   const [number, setNumber] = useState(0);
   const [dark, setDark] = useState(false);
-  const doubleNumber = slowFunc(number);
+  const doubleNumber = useMemo(() => {
+    return slowFunc(number);
+  },[number]);
 
   const theme = {
     backgroundColor: dark ? '#333' : '#FFF',
