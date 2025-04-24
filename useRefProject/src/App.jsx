@@ -2,11 +2,14 @@ import { useState } from 'react'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [name, setName] = useState('');
 
   return (
     <>
-    useRefProject
+      <div className="App">
+        <input type="text" value={name} onChange={(e) => setName(e.target.value)} />
+        <div>My name is {name}</div>
+    </div>
     </>
   )
 }
