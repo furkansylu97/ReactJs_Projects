@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useCallback } from 'react'
 import './App.css'
 import { Numbers } from './components/Numbers';
 
@@ -6,9 +6,13 @@ function App() {
   const [number, setNumber] = useState(1);
   const [dark, setDark] = useState(false);
 
-  const getItems = () => {
-    return [number, number + 1 , number +2];
-  }
+  const getItems = useCallback((incrementValue) => {
+    return [
+      number + incrementValue, 
+      number + 1 + incrementValue, 
+      number + 2 + incrementValue
+    ];
+  },[number]);
 
   const theme = {
     backgroundColor: dark ? '#333' : '#FFF',

@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react'
 export const Numbers = ({ getItems }) => {
 
     useEffect(() => {
-      setItems(getItems());
+      setItems(getItems(2));
       console.log('Updating Items');
     },[getItems]);
 
