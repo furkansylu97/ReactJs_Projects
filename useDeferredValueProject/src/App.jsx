@@ -2,11 +2,15 @@ import { useState } from 'react'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [input, setInput] = useState('');
+
+  const handleChange = (e) => {
+    setInput(e.target.value);
+  };
 
   return (
     <>
-     useDeferredValueProject
+     <input type="text" value={input} onChange={handleChange} />
     </>
   )
 }
