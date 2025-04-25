@@ -22,7 +22,7 @@ function App() {
     <>
        <input type="text" value={input} onChange={handleChange} />
 
-         {myList.map((item, index) => {
+       {isPending ? 'Downloading' : myList.map((item, index) => {
             return <div key={index}>{item}</div>;
           })}
     </>
