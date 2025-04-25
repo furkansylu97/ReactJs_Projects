@@ -1,17 +1,21 @@
-import { useState } from 'react'
+import { useState, useTransition, startTransition } from 'react'
 import './App.css'
 
 function App() {
   const [input, setInput] = useState('');
   const [myList, setMyList] = useState([]);
+  const [isPending, startTransition] = useTransition();
 
   const handleChange = (e) => {
     setInput(e.target.value);
-      const myArray = [];
-      for (let i = 0; i < 2000; i++) {
-        myArray.push(e.target.value);
-      }
-      setMyList(myArray);
+
+    startTransition(() => {
+        const myArray = [];
+        for (let i = 0; i < 2000; i++) {
+          myArray.push(e.target.value);
+        }
+        setMyList(myArray);
+      })
     };
 
   return (
