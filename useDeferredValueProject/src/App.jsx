@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import './App.css'
+import { Characters } from './components/Characters';
 
 function App() {
   const [input, setInput] = useState('');
@@ -11,6 +12,7 @@ function App() {
   return (
     <>
      <input type="text" value={input} onChange={handleChange} />
+     <Characters />
     </>
   )
 }
