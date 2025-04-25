@@ -12,7 +12,7 @@ function App() {
   return (
     <>
      <input type="text" value={input} onChange={handleChange} />
-     <Characters />
+     <Characters input={input}/>
     </>
   )
 }
