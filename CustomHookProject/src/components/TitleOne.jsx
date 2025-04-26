@@ -1,12 +1,11 @@
 import React from 'react'
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
+import usetitle from './useTitle'
 
 export const TitleOne = () => {
 
     const [num, setNum] = useState(0)
-    useEffect(() => {
-      document.title = `Sayı ${num}`
-    }, [num]);
+    usetitle(num);
     
 
   return (
