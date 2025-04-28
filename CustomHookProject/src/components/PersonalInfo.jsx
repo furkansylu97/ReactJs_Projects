@@ -6,9 +6,14 @@ function PersonalInfo() {
     const [firstName, setFirstName] = useState('');
     const [lastName, setLastName] = useState('');
 
+    const submitForm = (e) => {
+        e.preventDefault();
+        alert(`Hello ${firstName} ${lastName}`);
+    };
+
   return (
     <div>
-        <form >
+        <form onSubmit={ submitForm }>
             <div>
                 <label>Name</label>
                 <input type="text" value={firstName} onChange={(e) => setFirstName(e.target.value)} />
