@@ -1,10 +1,10 @@
 import React from 'react'
-import { useState } from 'react'
+import useInput from './useInput';
 
 function PersonalInfo() {
 
-    const [firstName, setFirstName] = useState('');
-    const [lastName, setLastName] = useState('');
+    const[firstName, bindFirstName, resetFirstName] = useInput('');
+    const[lastName, bindLastName, resetLastName] = useInput('');
 
     const submitForm = (e) => {
         e.preventDefault();
@@ -16,11 +16,11 @@ function PersonalInfo() {
         <form onSubmit={ submitForm }>
             <div>
                 <label>Name</label>
-                <input type="text" value={firstName} onChange={(e) => setFirstName(e.target.value)} />
+                <input type="text" {...bindFirstName} />
             </div>
             <div>
                 <label>Lastname</label>
-                <input type="text" value={lastName} onChange={(e) => setLastName(e.target.value)} />
+                <input type="text" {...bindLastName} />
             </div>
             <button>Save</button>
         </form>
