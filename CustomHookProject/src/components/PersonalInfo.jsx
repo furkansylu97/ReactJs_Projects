@@ -9,6 +9,8 @@ function PersonalInfo() {
     const submitForm = (e) => {
         e.preventDefault();
         alert(`Hello ${firstName} ${lastName}`);
+        resetFirstName();
+        resetLastName();
     };
 
   return (
