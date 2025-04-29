@@ -9,6 +9,8 @@ import { NotFoundPage } from './components/NotFoundPage'
 import { History } from './components/History'
 import { Company } from './components/Company'
 import { Team } from './components/Team'
+import { Members } from './components/Members'
+import { MemberDetail } from './components/MemberDetail'
 
 function App() {
 
@@ -24,6 +26,8 @@ function App() {
         <Route path='company' element={<Company/>} />
         <Route path='team' element={<Team/>} />
       </Route>
+      <Route path='/members' element={<Members/>} />
+      <Route path='/members/:memberId' element={<MemberDetail/>} />
       <Route path='*' element={<NotFoundPage/>} />
      </Routes>
 
