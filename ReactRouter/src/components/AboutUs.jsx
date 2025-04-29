@@ -1,9 +1,11 @@
 import React from 'react'
 
-export const AboutUs = () => {
+function AboutUs() {
   return (
     <div>
-      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut quia vel commodi, voluptas cumque tempora voluptatem suscipit! Fugiat, ut dolorem! Maxime, ipsam recusandae magni pariatur voluptas ratione culpa itaque aspernatur qui aperiam expedita labore vero animi praesentium quia omnis, quidem quam id, quos voluptatem quod dicta dolor? Deleniti quod, voluptatibus veniam esse odio id magnam numquam temporibus quo reiciendis eius optio tempora aliquid repellat iure.
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio blanditiis obcaecati sequi vel nulla minus facilis quam suscipit rem deleniti optio impedit distinctio quod, aspernatur nam eveniet aliquid magnam nesciunt quia autem tenetur et excepturi? Vel, neque. Id, quod debitis incidunt nostrum nemo architecto expedita. Odit, veniam similique! Doloribus quae tempora, enim, cumque assumenda explicabo modi dolorem hic, quisquam vero error non nemo veniam alias!
     </div>
   )
 }
+
+export default AboutUs

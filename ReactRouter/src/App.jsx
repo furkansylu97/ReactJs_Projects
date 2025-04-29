@@ -11,9 +11,7 @@ import { Company } from './components/Company'
 import { Team } from './components/Team'
 import { Members } from './components/Members'
 import { MemberDetail } from './components/MemberDetail'
-const LazyAboutUs = React.lazy(() =>
-  import('./components/AboutUs').then(module => ({ default: module.AboutUs }))
-);
+const LazyAboutUs = React.lazy(() => import('./components/AboutUs'));
 
 function App() {
 
