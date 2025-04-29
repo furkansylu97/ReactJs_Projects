@@ -6,6 +6,7 @@ import { AboutUs } from './components/AboutUs'
 import { Navbar } from './components/Navbar'
 import { Mission } from './components/Mission'
 import { NotFoundPage } from './components/NotFoundPage'
+import { History } from './components/History'
 
 function App() {
 
@@ -17,6 +18,7 @@ function App() {
       <Route path='/' element={<Home/>} />
       <Route path='/aboutUs' element={<AboutUs/>} />
       <Route path='/mission' element={<Mission/>} />
+      <Route path='/history' element={<History/>} />
       <Route path='*' element={<NotFoundPage/>} />
      </Routes>
 
