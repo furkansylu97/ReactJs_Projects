@@ -1,6 +1,7 @@
 import React from 'react'
 import { Data } from '../helpers/Data'
-import { MenuItem } from './MenuItem'
+import  MenuItem  from './MenuItem'
+import '../styles/Menu.css'
 
 export const Menu = () => {
   return (
