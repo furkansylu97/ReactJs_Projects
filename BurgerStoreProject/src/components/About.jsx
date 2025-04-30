@@ -1,5 +1,6 @@
 import React from 'react'
 import BannerImage from '../assets/img/bannernew.jpg'
+import '../styles/About.css'
 
 export const About = () => {
   return (
