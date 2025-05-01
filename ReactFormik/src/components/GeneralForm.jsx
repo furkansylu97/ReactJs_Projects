@@ -1,5 +1,6 @@
 import React from 'react'
 import { useFormik } from 'formik';
+import { basicSchema } from '../schemas/index'
 
 export const GeneralForm = () => {
 
@@ -22,7 +23,9 @@ export const GeneralForm = () => {
             value={values.email}
             onChange={handleChange} 
             id='email' 
-            placeholder='Please enter your email adress...' />
+            placeholder='Please enter your email adress...'
+            className={errors.email ? 'input-error' : ''} />
+            {errors.email && <p className='error'>{errors.email}</p>}
         </div>
         <div className='inputDiv'>
             <label>Age</label>
@@ -31,7 +34,9 @@ export const GeneralForm = () => {
             value={values.age}
             onChange={handleChange} 
             id='age' 
-            placeholder='Please enter your age...' />
+            placeholder='Please enter your age...'
+            className={errors.age ? 'input-error' : ''} />
+            {errors.age && <p className='error'>{errors.age}</p>}
         </div>
         <div className='inputDiv'>
             <label>Password</label>
@@ -40,7 +45,9 @@ export const GeneralForm = () => {
             value={values.password}
             onChange={handleChange} 
             id='password' 
-            placeholder='Please enter your password...' />
+            placeholder='Please enter your password...'
+            className={errors.password ? 'input-error' : ''} />
+            {errors.password && <p className='error'>{errors.password}</p>}
         </div>
         <div className='inputDiv'>
             <label>Confirm Password</label>
@@ -49,7 +56,9 @@ export const GeneralForm = () => {
             value={values.confirmPassword}
             onChange={handleChange} 
             id='confirmPassword' 
-            placeholder='Please confirm your password...' />
+            placeholder='Please confirm your password...'
+            className={errors.confirmPassword ? 'input-error' : ''} />
+            {errors.confirmPassword && <p className='error'>{errors.confirmPassword}</p>}
         </div> 
         <button type='submit'>SAVE</button>     
     </form>
