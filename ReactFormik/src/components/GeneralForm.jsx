@@ -15,7 +15,7 @@ export const GeneralForm = () => {
 
   return (
     <form>
-        <div>
+        <div className='inputDiv'>
             <label>E-mail</label>
             <input 
             type="email" 
@@ -24,7 +24,7 @@ export const GeneralForm = () => {
             id='email' 
             placeholder='Please enter your email adress...' />
         </div>
-        <div>
+        <div className='inputDiv'>
             <label>Age</label>
             <input 
             type="number" 
@@ -33,7 +33,7 @@ export const GeneralForm = () => {
             id='age' 
             placeholder='Please enter your age...' />
         </div>
-        <div>
+        <div className='inputDiv'>
             <label>Password</label>
             <input 
             type="password" 
@@ -42,7 +42,7 @@ export const GeneralForm = () => {
             id='password' 
             placeholder='Please enter your password...' />
         </div>
-        <div>
+        <div className='inputDiv'>
             <label>Confirm Password</label>
             <input 
             type="password" 
