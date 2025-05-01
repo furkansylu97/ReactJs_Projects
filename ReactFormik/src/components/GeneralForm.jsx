@@ -9,9 +9,9 @@ export const GeneralForm = () => {
             age: '',
             password: '',
             confirmPassword: '',
-          }
+          },
+          validationSchema: basicSchema,
         });
-
 
   return (
     <form>
