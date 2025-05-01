@@ -1,7 +1,22 @@
 import React from 'react'
+import { useFormik } from 'formik';
 
 export const GeneralForm = () => {
+
+        const formik = useFormik({
+          initialValues: {
+            email: '',
+          }
+        });
+
+
   return (
-    <div>GeneralForm</div>
+    <form>
+        <div>
+            <label>E-mail</label>
+            <input type="email" value={formik.values.email} id='email' placeholder='Please enter your email adress...' />
+        </div>
+        
+    </form>
   )
 }
