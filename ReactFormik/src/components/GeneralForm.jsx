@@ -6,6 +6,7 @@ const onSubmit = async (values , actions) => {
   await new Promise((resolve) => {
     setTimeout(resolve, 1000)
   });
+  actions.resetForm();
 }
 
 export const GeneralForm = () => {
