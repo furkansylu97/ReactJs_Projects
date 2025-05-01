@@ -1,5 +1,6 @@
 import React from 'react'
 import Banner from '../assets/img/banner.png'
+import '../styles/Contact.css'
 
 export const Contact = () => {
   return (
@@ -14,7 +15,7 @@ export const Contact = () => {
           <label>E-mail</label>
           <input type="email" name='email' placeholder='Please enter your e-mail adress...'/>
           <label>Your Message</label>
-          <textarea rows={'6'} name='message' placeholder='Please enter your name and surname...'></textarea>
+          <textarea rows={'6'} name='message' placeholder='Please enter your messages...'></textarea>
         </form>
       </div>
     </div>
