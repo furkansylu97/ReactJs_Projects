@@ -2,9 +2,15 @@ import React from 'react'
 import { useFormik } from 'formik';
 import { basicSchema } from '../schemas/index'
 
+const onSubmit = async (values , actions) => {
+  await new Promise((resolve) => {
+    setTimeout(resolve, 1000)
+  });
+}
+
 export const GeneralForm = () => {
 
-        const { values, errors, handleChange, handleSubmit} = useFormik({
+        const { values, errors, isSubmitting, handleChange, handleSubmit} = useFormik({
           initialValues: {
             email: '',
             age: '',
@@ -12,10 +18,11 @@ export const GeneralForm = () => {
             confirmPassword: '',
           },
           validationSchema: basicSchema,
+          onSubmit,
         });
 
   return (
-    <form>
+    <form onSubmit={ handleSubmit }>
         <div className='inputDiv'>
             <label>E-mail</label>
             <input 
@@ -60,7 +67,7 @@ export const GeneralForm = () => {
             className={errors.confirmPassword ? 'input-error' : ''} />
             {errors.confirmPassword && <p className='error'>{errors.confirmPassword}</p>}
         </div> 
-        <button type='submit'>SAVE</button>     
+        <button disabled={isSubmitting} type='submit'>SAVE</button>     
     </form>
   )
 }
