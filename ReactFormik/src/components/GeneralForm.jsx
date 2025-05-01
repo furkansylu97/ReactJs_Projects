@@ -3,7 +3,7 @@ import { useFormik } from 'formik';
 
 export const GeneralForm = () => {
 
-        const formik = useFormik({
+        const { values, errors, handleChange, handleSubmit} = useFormik({
           initialValues: {
             email: '',
           }
@@ -14,7 +14,7 @@ export const GeneralForm = () => {
     <form>
         <div>
             <label>E-mail</label>
-            <input type="email" value={formik.values.email} id='email' placeholder='Please enter your email adress...' />
+            <input type="email" value={values.email} id='email' placeholder='Please enter your email adress...' />
         </div>
         
     </form>
