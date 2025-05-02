@@ -70,3 +70,7 @@ button {
 .checkbox input {
   width: auto;
 }
+
+.formLink {
+  color: white;
+}

@@ -4,6 +4,7 @@ import CustomInput from './CustomInput';
 import { advancedSchema } from '../schemas';
 import CustomSelect from './CustomSelect';
 import CustomCheckbox from './CustomCheckbox';
+import { Link } from 'react-router-dom'
 
 const onSubmit = async (values , actions) => {
   await new Promise((resolve) => {
@@ -44,6 +45,7 @@ export const PortalForm = () => {
            name='isAccepted'
            />
            <button disabled={isSubmitting} type='submit'>Save</button>
+           <Link className='formLink' to='/'>Go to Main Form</Link>
          </Form>
        )}
      </Formik>

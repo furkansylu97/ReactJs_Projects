@@ -1,6 +1,7 @@
 import React from 'react'
 import { useFormik } from 'formik';
 import { basicSchema } from '../schemas/index'
+import { Link } from 'react-router-dom'
 
 const onSubmit = async (values , actions) => {
   await new Promise((resolve) => {
@@ -68,7 +69,8 @@ export const GeneralForm = () => {
             className={errors.confirmPassword ? 'input-error' : ''} />
             {errors.confirmPassword && <p className='error'>{errors.confirmPassword}</p>}
         </div> 
-        <button disabled={isSubmitting} type='submit'>SAVE</button>     
+        <button disabled={isSubmitting} type='submit'>SAVE</button>
+        <Link className='formLink' to='/portal'>Go to Portal</Link>
     </form>
   )
 }
