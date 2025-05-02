@@ -2,6 +2,7 @@ import React from 'react'
 import { Form, Formik } from 'formik'
 import CustomInput from './CustomInput';
 import { advancedSchema } from '../schemas';
+import CustomSelect from './CustomSelect';
 
 const onSubmit = async (values , actions) => {
   await new Promise((resolve) => {
@@ -27,6 +28,17 @@ export const PortalForm = () => {
            name='username'
            placeholder='Please enter your Username'
            />
+           <CustomSelect 
+           label='Your University'
+           name='university'
+           placeholder='Please select your universtiy'
+           >
+            <option value="">Please Select Your University</option>
+            <option value="Atatürk University">Atatürk University</option>
+            <option value="Izmir Katip Celebi University">Izmir Katip Celebi University</option>
+            <option value="Inönü University">Inönü University</option>
+            <option value="Ege University">Ege University</option>
+           </CustomSelect>
          </Form>
        )}
      </Formik>
