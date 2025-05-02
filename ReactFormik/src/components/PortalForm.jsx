@@ -15,13 +15,12 @@ const onSubmit = async (values , actions) => {
 export const PortalForm = () => {
   return (
     <>
-    {' '}
     <Formik
        initialValues={{ username: '', university: '', isAccepted: false }}
        onSubmit={ onSubmit }
        validationSchema={ advancedSchema }
      >
-       {() => (
+       {({isSubmitting}) => (
          <Form>
            <CustomInput
            type='text' 
@@ -44,6 +43,7 @@ export const PortalForm = () => {
            type='checkbox'
            name='isAccepted'
            />
+           <button disabled={isSubmitting} type='submit'>Save</button>
          </Form>
        )}
      </Formik>
