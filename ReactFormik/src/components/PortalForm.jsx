@@ -3,6 +3,7 @@ import { Form, Formik } from 'formik'
 import CustomInput from './CustomInput';
 import { advancedSchema } from '../schemas';
 import CustomSelect from './CustomSelect';
+import CustomCheckbox from './CustomCheckbox';
 
 const onSubmit = async (values , actions) => {
   await new Promise((resolve) => {
@@ -39,6 +40,10 @@ export const PortalForm = () => {
             <option value="Inönü University">Inönü University</option>
             <option value="Ege University">Ege University</option>
            </CustomSelect>
+           <CustomCheckbox
+           type='checkbox'
+           name='isAccepted'
+           />
          </Form>
        )}
      </Formik>
