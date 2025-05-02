@@ -24,3 +24,20 @@ export const basicSchema = yup.object().shape({
     .oneOf([yup.ref('password')], 'Passwords do not match')
     .required('This field is required')
 })
+
+export const advancedSchema = yup.object().shape({
+    username: yup
+    .string()
+    .min(3, 'Username must be at least 3 characters long')
+    .required('This field is required'),
+
+    university: yup
+    .string()
+    .oneOf(['Atatürk University', 'Izmir Katip Celebi University', 'Inönü University', 'Ege University'], 'Please select your university')
+    .required('This field is required'),
+
+    isAccepted: yup
+    .boolean()
+    .oneOf([true], 'Please accept the terms of use')
+    .required('This field is required')
+})
